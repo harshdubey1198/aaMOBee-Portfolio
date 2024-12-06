@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
     background-color: #ffffff;
     color: #000000;
-    padding: 10px 20px !important;
+    padding: 10px 20px 0 20px !important;
     padding-bottom: 0 ;
     position: fixed !important;
     top: 0;
@@ -132,7 +132,7 @@ body {
     border-radius: 6px;
   }
   .bfs{
-    margin-top: -33px;
+    margin-top: -41px;
     width: 65%;
     position: absolute;
     right: 0;
@@ -326,7 +326,7 @@ body {
       align-items: center;
       flex-direction: column;
       gap: 20px;
-      margin-top: 100px;
+      margin-top: 300px;
       padding-top: 30px;
       min-height: 600px;
       border-top: 1px solid rgba(255, 0, 0, 0.467);
@@ -430,10 +430,175 @@ body {
   }
   .cloud-solution{
     height: 420px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     margin-top: 60px;
     margin-bottom: 60px;
     position: relative;
   }
   
+  .cloud-img{
+    /* width: 704px;
+    height: 352px; */
+    max-width: 605px;
+    /* width: 1rem; */
+    height: 297px;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    z-index: 4;
+  }
+  
+  .cld-heading{
+    z-index:5;
+    width: 702px ;
+    /* border: 1px solid red; */
+    font-size: 40px;
+    font-weight: semibold;
+    font-family: 'roboto', sans-serif;
+  }
+  
+  .cld-wwa{
+    z-index:5;
+    padding-left: 5px;
+    border-left: 2px solid red;
+  }
+  .cld-p1{
+    z-index:5;
+    width: 493px;
+    font-size: 24px;
+    font-weight: medium;
+    font-family: 'Roboto' , sans-serif ;
+  }
+  .cld-p2{
+    z-index:5;
+      position: absolute;
+      width: 401px;
+      height: 63px;
+      left: 0;
+      bottom: 171px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #4A4A4A;
+      }
+      .cld-btn{
+        z-index:5;
+        text-decoration: none;
+        color:white;
+        background: #FAA624;
+        /* Frame 1171277234 */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 10px;
+        gap: 2px;
+        position: absolute;
+        bottom: 40px;
+        width: 245px;
+        height: 54px;
+        background: #FAA624;
+        border-radius: 7px;
+        
+      }
+      .cld-btn:hover{
+        color: white;
+      }
+
+      .user-favourites {
+        background: #171C22;
+        padding: 40px 10%;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+      }
+      
+      .uf-heading {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 47px;
+      }
+      
+      .uf-small-title {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        border-left: 2px solid #FAA624;
+        padding-left: 10px;
+      }
+      
+      .uf-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .gtc{
+        grid-template-columns: none;
+        display: flex !important;
+        margin-bottom: 100px;
+
+      }
+      .uf-box {
+        background: #F8F8F8;
+        border-radius: 8px;
+        padding: 20px;
+      }
+      
+      .uf-box h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color:#191821;
+        font-weight:semi-bold;
+      }
+      
+      .uf-box p {
+        font-size: 14px;
+        color: #4A4A4A;
+        min-height: 84px;
+      }
+      .uf-card{
+        width:100%;
+        background: #000;
+
+      }
+      .uf-img{
+        width: 100%;
+      }
+
+      .gtc .uf-box:nth-child(1){
+        width: 66%;
+        background-image: url('./Assets/uf-img-4.png');
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        p{
+          font-size: 18px;
+          font-family: 'Roboto',sans-serif;
+          color: #4A4A4A;
+        }
+      }
+      .gtc .uf-box:nth-child(2){
+        width: 35%;
+      }
+
+      .status-overdue {
+        color: #FF4D4D;
+      }
+      .uf-btn{
+        position: absolute;
+        z-index: 99;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        bottom: 60px;
+        text-decoration: none;
+        color: white;
+        padding: 8px 10px;
+        border:2px solid #ffc107;
+        border-radius: 12px;
+      }
+      
