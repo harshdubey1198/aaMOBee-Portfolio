@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globe Scroll Carousel</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            height: 50%;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateY(0deg);
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .carousel-card {
+            position: absolute;
+            width: 200px;
+            height: 191px;
+            /* top: 50%;
+            transform: translate(-50% , 0);
+            margin-top: 100px; */
+            border: 2px solid grey;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-card">1</div>
+            <div class="carousel-card">2</div>
+            <div class="carousel-card">3</div>
+            <div class="carousel-card">4</div>
+            <div class="carousel-card">5</div>
+        </div>
+        <div class="carousel-controls">
+            <button class="control-btn" id="prevBtn">&lt;</button>
+            <button class="control-btn" id="nextBtn">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const cards = Array.from(track.children);
+        const totalCards = cards.length;
+        const angleStep = 360 / totalCards;
+        let currentAngle = 0;
+
+        // Arrange cards in a circular pattern
+        function arrangeCards() {
+            cards.forEach((card, index) => {
+                const angle = index * angleStep;
+                const rad = angle * (Math.PI / 180);
+                const x = Math.sin(rad) * 300;
+                const z = Math.cos(rad) * 300;
+
+                card.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${angle}deg)`;
+                card.style.opacity = z > 0 ? 1 : 0.5;
+            });
+        }
+
+        // Update the carousel's angle and rearrange cards
+        function updateCarousel(direction) {
+            currentAngle += direction * angleStep;
+            track.style.transform = `rotateY(${currentAngle}deg)`;
+        }
+
+        // Event listeners
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            updateCarousel(-1);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            updateCarousel(1);
+        });
+
+        // Initialize the carousel
+        arrangeCards();
+    </script>
+</body>
+</html>
