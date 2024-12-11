@@ -43,7 +43,23 @@ nextBtn.addEventListener('click', () => {
 // Initialize
 showSlide(currentSlide);
 
-function toggleFAQ(element) {
-  const parent = element.parentElement;
-  parent.classList.toggle('open');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  if (faqItems.length > 0) {
+    faqItems[0].classList.add('open');
+  }
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      faqItems.forEach((faq) => {
+        if (faq !== item) {
+          faq.classList.remove('open');
+        }
+      });
+
+      item.classList.toggle('open');
+    });
+  });
+});

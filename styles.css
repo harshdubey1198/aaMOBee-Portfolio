@@ -431,7 +431,7 @@ body {
   .cloud-solution{
     height: 420px;
     /* border: 1px solid red; */
-    width: 80%;
+    width: 64%;
     margin-top: 60px;
     margin-bottom: 60px;
     position: relative;
@@ -894,9 +894,237 @@ body {
       background: #FDFDFD;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
+    
     .client-logo {
       width: 171px;
       object-fit: cover;
       min-height: 54px;
       }
+
+      .rise-aamobee{
+        position: relative;
+        min-height: 482px;
+        /* background: #000; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 200px ;
+        gap: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 100px;
+      }
+      .mid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+      }
+      .rise-div1{
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .rise-div2{
+        width: 381px;
+        height: 400px;
+      }
+      .ra-btn{
+        color: #191821;
+        background: none;
+        border-radius: 12px;
+        border:2px solid #FAA624;
+        text-decoration: none;
+        padding: 10px 20px;
+        max-width: 189px;
+        &:hover{
+          color: #FAA624;
+          background-color: black;
+        }
+      }
+      .rise-logo{
+        position: absolute;
+        bottom: -85px ;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        right: 20px;
+        width: 79px;
+        height: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .rise-img{
+        width: 59px;
+      }
+      .footer-section{
+        min-height: 833px;
+        background: #191821;
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .head-signup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* gap: 20px; */
+        padding: 50px 0;
+        color: #ffffff;
+      }
+      .footer-heading{
+        font-size: 40px;
+        /* color: #ffffff; */
+        font-weight: 500;
+      }
+      .footer-subheading{
+        font-size: 32px;
+      }
+      .footer-signup-btn{
+        background: #FAA624;
+        border-radius: 7px;
+        text-decoration: none;
+        color: white;
+        margin-top: 30px;
+        /* padding: 10px 20px; */
+        width: 151px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border: 2px solid #FAA624;
+        height: 45; gap: 5px;
+        transition: background-color 0.5s ease, color 0.3s ease;
+
+        &:hover{
+          background: #171C22;
+          border: 2px solid #FAA624;
+          color: white;
+        }
+      }
+
+      .columner{
+        /* border: 2px solid #FAA624 ; */
+        margin: 0 50px;
+        min-height: 400px;
+        display: flex;
+        .col-md-3{
+          min-height: 100px ;
+          color: #fff;
+          /* border: 2px solid red; */
+          padding-left: 6%;
+          h4{
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+          ul{
+            list-style: none;
+            transform: translate(-10% , 0);
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            li a{
+              color: #F0F0F0;
+              font-size: 18px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .hr{
+        border: 2px solid #6D6D6D;
+        margin: 0 50px;
+        margin-top: 20px;
+      }
+          .email-us-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 10px 20px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+          }
+          .email-text {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            width: calc( 100% - 40px);
+          }
+
+          .email-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8a935;
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            transition: transform 0.5s ease;  
+            &:hover{
+                transform: scale(1.2);
+              }
+
+          }
+
+          .email-icon i {
+            margin: 0;
+            cursor: pointer;
+          }
+
+          .footer-copyright{
+            display: flex;
+            margin: 0 50px;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+          }
+          .downloader-apps{
+            width: 102px;
+            height: 45px;
+            img{
+              width: auto;
+              height: 45px;
+              margin: 0 2px;
+              cursor: pointer;
+            }
+          }
+          .copyright-text{
+            font-size: 18px;
+            color: #faa624;
+            font-weight: 500;
+          }
+          .social-icons{
+            display: flex;
+            gap: 20px;
+            i:nth-child(1){
+              padding: 10px 15px;
+            }
+            i{
+              color: black;
+              font-size: 24px;
+              background: white;
+              padding: 10px 12px;
+              border: 4px solid #000;
+              border-radius: 50%;
+              text-decoration: none;
+              &:hover{
+                background: #000;
+                border: 4px solid #faa624;
+                color: #faa624;
+                cursor: pointer;
+              }
+            }
+          }
