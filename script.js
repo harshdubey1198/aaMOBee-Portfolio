@@ -63,3 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// country flag logic 
+function updateFlag() {
+  const selectElement = document.getElementById('country');
+  const selectedOption = selectElement.options[selectElement.selectedIndex];
+  const flagSrc = selectedOption.getAttribute('data-flag');
+  document.getElementById('flag').src = flagSrc;
+}
